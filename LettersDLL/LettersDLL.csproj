@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E7B7FC9-1666-498D-AEA5-7B959DFD640B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LettersDLL</RootNamespace>
+    <AssemblyName>LettersDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindLetterByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLetterByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLetterParagraphByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterParagraphByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLetterParagraphByLetterIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterParagraphByLetterIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLetterParagraphHistoryByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterParagraphHistoryByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLetterParagraphHistoryByLetterIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLetterParagraphHistoryByLetterIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindLettersByLetterIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindLettersByLetterIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedLettersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedLettersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertLetterEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertLetterEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertLetterParagraphHistoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertLetterParagraphHistoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertParagraphEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertParagraphEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetterParagraphDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetterParagraphDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetterParagraphHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetterParagraphHistoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LettersClass.cs" />
+    <Compile Include="LettersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LettersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLetterParagraphEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateLetterParagraphEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindLetterByDateMatchDataSet.xsc">
+      <DependentUpon>FindLetterByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterByDateMatchDataSet.xss">
+      <DependentUpon>FindLetterByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterByDescriptionDataSet.xsc">
+      <DependentUpon>FindLetterByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterByDescriptionDataSet.xss">
+      <DependentUpon>FindLetterByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphByDescriptionDataSet.xsc">
+      <DependentUpon>FindLetterParagraphByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterParagraphByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterParagraphByDescriptionDataSet.xss">
+      <DependentUpon>FindLetterParagraphByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphByLetterIDDataSet.xsc">
+      <DependentUpon>FindLetterParagraphByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphByLetterIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterParagraphByLetterIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterParagraphByLetterIDDataSet.xss">
+      <DependentUpon>FindLetterParagraphByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphHistoryByDescriptionDataSet.xsc">
+      <DependentUpon>FindLetterParagraphHistoryByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphHistoryByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterParagraphHistoryByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterParagraphHistoryByDescriptionDataSet.xss">
+      <DependentUpon>FindLetterParagraphHistoryByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphHistoryByLetterIDDataSet.xsc">
+      <DependentUpon>FindLetterParagraphHistoryByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLetterParagraphHistoryByLetterIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLetterParagraphHistoryByLetterIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLetterParagraphHistoryByLetterIDDataSet.xss">
+      <DependentUpon>FindLetterParagraphHistoryByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLettersByLetterIDDataSet.xsc">
+      <DependentUpon>FindLettersByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindLettersByLetterIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindLettersByLetterIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindLettersByLetterIDDataSet.xss">
+      <DependentUpon>FindLettersByLetterIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedLettersDataSet.xsc">
+      <DependentUpon>FindSortedLettersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedLettersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedLettersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedLettersDataSet.xss">
+      <DependentUpon>FindSortedLettersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertLetterEntry.xsc">
+      <DependentUpon>InsertLetterEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertLetterEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertLetterEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertLetterEntry.xss">
+      <DependentUpon>InsertLetterEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertLetterParagraphHistoryEntry.xsc">
+      <DependentUpon>InsertLetterParagraphHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertLetterParagraphHistoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertLetterParagraphHistoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertLetterParagraphHistoryEntry.xss">
+      <DependentUpon>InsertLetterParagraphHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertParagraphEntry.xsc">
+      <DependentUpon>InsertParagraphEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertParagraphEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertParagraphEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertParagraphEntry.xss">
+      <DependentUpon>InsertParagraphEntry.xsd</DependentUpon>
+    </None>
+    <None Include="LetterParagraphDataSet.xsc">
+      <DependentUpon>LetterParagraphDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LetterParagraphDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetterParagraphDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetterParagraphDataSet.xss">
+      <DependentUpon>LetterParagraphDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LetterParagraphHistoryDataSet.xsc">
+      <DependentUpon>LetterParagraphHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LetterParagraphHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetterParagraphHistoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetterParagraphHistoryDataSet.xss">
+      <DependentUpon>LetterParagraphHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LettersDataSet.xsc">
+      <DependentUpon>LettersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LettersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LettersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LettersDataSet.xss">
+      <DependentUpon>LettersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateLetterParagraphEntry.xsc">
+      <DependentUpon>UpdateLetterParagraphEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateLetterParagraphEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateLetterParagraphEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateLetterParagraphEntry.xss">
+      <DependentUpon>UpdateLetterParagraphEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
